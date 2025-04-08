@@ -4,139 +4,169 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minecraft Party</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Rubik', sans-serif;
+      background-color: #e4e8f2;
     }
-
-    /* Navbar */
-    .navbar {
-      background-color: #c72040;
+    header {
+      background-color: #c21841;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
       color: white;
     }
-    .nav-left, .nav-right {
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      color: white;
+      background-color: #d52d4f;
+      transition: background-color 0.3s ease;
+    }
+    nav a.active {
+      background-color: #a01736;
+    }
+    nav a:hover {
+      background-color: #b82540;
+    }
+    .top-buttons {
       display: flex;
       align-items: center;
-    }
-    .nav-left img {
-      height: 32px;
-      margin-right: 20px;
-    }
-    .nav-link {
-      margin: 0 10px;
-      cursor: pointer;
-      font-weight: bold;
+      gap: 16px;
     }
     .discord-button {
-      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       background-color: #5865F2;
-      padding: 6px 12px;
-      border-radius: 8px;
-      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
+      color: white;
+      font-weight: 500;
+    }
+    .discord-button img {
+      height: 20px;
     }
     .server-button {
-      background-color: #ffcc00;
+      background-color: #fdd835;
       color: black;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
     }
-
-    /* Hero */
     .hero {
-      background-color: #c72040;
+      background-color: #c21841;
+      padding: 40px;
       color: white;
       display: flex;
       justify-content: space-between;
-      padding: 40px;
+      align-items: center;
     }
-    .hero-text {
+    .hero-content {
       max-width: 50%;
     }
-    .hero-text h1 {
-      font-size: 48px;
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
     }
-    .hero-tags span {
-      background: white;
-      color: #c72040;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-right: 8px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .hero-image {
-      width: 45%;
-      height: 300px;
-      background: #007BFF;
-      border-radius: 16px;
-    }
-
-    /* Blog Section */
-    .blog-section {
+    .tags {
       display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      background-color: white;
+      color: #c21841;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .hero img {
+      background-color: #0077ff;
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .section {
       padding: 40px;
-      background-color: #eaf0f6;
+    }
+    .blog-preview {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      gap: 20px;
       align-items: center;
-      justify-content: center;
+      margin-bottom: 20px;
     }
-    .blog-image {
-      background: #007BFF;
+    .blog-preview img {
       width: 300px;
-      height: 200px;
-      border-radius: 16px;
-      margin-right: 30px;
-    }
-    .blog-text h2 {
-      margin: 0;
-    }
-    .blog-text p {
-      max-width: 500px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      background-color: #0077ff;
     }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="nav-left">
-      <img src="https://via.placeholder.com/32" alt="Logo">
-      <div class="nav-link">HOME</div>
-      <div class="nav-link">BLOG</div>
-      <div class="nav-link">SHOP</div>
+  <header>
+    <div class="logo">🎲</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Shop</a>
+    </nav>
+    <div class="top-buttons">
+      <a class="discord-button" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord Icon">
+        Discord
+      </a>
+      <div class="server-button">Plaxia.net</div>
     </div>
-    <div class="nav-right">
-      <a class="discord-button">Discord</a>
-      <div class="server-button">CYTOOXIEN.NET</div>
-    </div>
-  </div>
+  </header>
 
-  <div class="hero">
-    <div class="hero-text">
-      <div class="hero-tags">
-        <span>30+ MINISPIELE</span>
-        <span>SPIELBRETT</span>
-        <span>WÜRFELN</span>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tags">
+        <div class="tag">30+ Minispiele</div>
+        <div class="tag">Spielbrett</div>
+        <div class="tag">Würfeln</div>
       </div>
       <h1>Minecraft Party</h1>
-      <p>Das ultimative Brettspiel in Minecraft! Trete gegen andere Spieler in kreativen und actiongeladenen Party-Spielen an und sammle Würfel und Münzen!</p>
+      <p>
+        Erreiche als erster das Ende des Spielbretts! Tritt gegen deine Gegner in einer Vielzahl von kreativen und actiongeladenen Party-Spielen an und sammle dadurch Würfel und Münzen, welche dich schneller an dein Ziel bringen!
+      </p>
     </div>
-    <div class="hero-image"></div>
-  </div>
+    <img src="#" alt="Hero Image Platzhalter">
+  </section>
 
-  <div class="blog-section">
-    <div class="blog-image"></div>
-    <div class="blog-text">
-      <h2>Devblog #2 – Lasst uns über Skyblock reden!</h2>
-      <p><strong>DEVBLOG</strong> &bull; 8. April 2025</p>
-      <p>Mit einer Historie von mehr als 10 Jahren ist unser Skyblock-Server ein fester Bestandteil von Cytooxien. Doch die Reise ist noch nicht zu Ende. Es ist Zeit für frischen Wind...</p>
+  <section class="section">
+    <div class="blog-preview">
+      <img src="#" alt="Blog Bild Platzhalter">
+      <div>
+        <h2>Devblog #2 – Lasst uns über Skyblock reden!</h2>
+        <p><strong>Devblog</strong> • 8. April 2025</p>
+        <p>
+          Mit einer Historie von mehr als 10 Jahren ist unser Skyblock-Server ein fester Bestandteil von Plaxia. Doch die Reise ist noch nicht zu Ende. Es ist Zeit für frischen Wind, mutige Veränderungen und spannende Updates...
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 </body>
 </html>
